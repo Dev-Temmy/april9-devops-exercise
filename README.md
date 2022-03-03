@@ -7,6 +7,8 @@ The purpose of this is to help you get familiar with April9's DevOps tools and t
 
 Your task is to provision a small infrastructure through AWS CloudFormation that consists of a load balancer and an ecs cluster. Your load balancer will handle all client requests and forward it to a container hosted on an ecs cluster (See the infrastructure diagram below). You don't need to build your own custom docker image to host on aws. Instead use the docker image https://hub.docker.com/r/nginxdemos/hello/. Note: You are not expected to get the docker image running properly in the aws environment!
 
+![](./Infrastructure Diagram.png)
+
 How to approach the problem:
 
 1. Clone/Fork this repository into your Github account
