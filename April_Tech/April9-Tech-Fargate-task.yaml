@@ -66,20 +66,17 @@ Resources:
       TargetType: ip
 
   ListenerRule:
-  Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
-  Properties:
-    Actions:
-      - Type: forward
-        ForwardConfig:
-          TargetGroups:
-            - TargetGroupArn: !Ref TargetGroup
-              Weight: 1
-    Conditions:
-      - Field: path-pattern
-        Values:
-          - foo
-    ListenerArn: !Ref Listener
-    Priority: 1
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      Actions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      Conditions:
+        - Field: http-header
+      ListenerArn: !ImportValue Listener
+      Priority: 1
+
+
 Outputs:
 
   ApiEndpoint:
