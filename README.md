@@ -1,6 +1,7 @@
 
 # April9 DevOps Exercise
 
+
 ------
 
 The purpose of this is to help you get familiar with April9's DevOps tools and the base infrastructure. We use TeamCity (CI Tool) to build our app, package into a container, and push to AWS ECR. Afterwards we use Octopus Deploy (CD Tool) to deploy the build container and infrastructure using AWS CloudFormation. 
@@ -24,3 +25,7 @@ How to approach the problem:
 2. Deploy your CloudFormation file! If it deploys successfully you're done!
 3. Commit and push your changes to the repo
 3. Share the repo with us
+
+
+NB:
+I created a multiple yaml file and reference their value using import and export features in CloudFormation Stack.
