@@ -73,6 +73,15 @@ Resources:
           TargetGroupArn: !Ref TargetGroup
       Conditions:
         - Field: http-header
+          HttpHeaderConfig:
+            HttpHeaderName: User-Agent
+            Values:
+              - Mozilla
+        - Field: http-header
+          HttpHeaderConfig:
+            HttpHeaderName: Referer
+            Values:
+              - 'https://www.amazon.com/'
       ListenerArn: !ImportValue Listener
       Priority: 1
 
